@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Shaders\FragmentShaderGouraud.frag" />
+    <None Remove="Shaders\FragmentShaderPhong.frag" />
+    <None Remove="Shaders\VertexShaderGouraud.vert" />
+    <None Remove="Shaders\VertexShaderPhong.vert" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Shaders\FragmentShaderGouraud.frag" />
+    <EmbeddedResource Include="Shaders\FragmentShaderPhong.frag" />
+    <EmbeddedResource Include="Shaders\VertexShaderGouraud.vert" />
+    <EmbeddedResource Include="Shaders\VertexShaderPhong.vert" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Silk.NET" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.OpenGL.Extensions.ImGui" Version="2.22.0" />
+  </ItemGroup>
+
+</Project>
